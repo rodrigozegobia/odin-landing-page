@@ -1,0 +1,43 @@
+/// Stroke font-character
+/// @param  {Integer} $stroke - Stroke width
+/// @param  {Color}   $color  - Stroke color
+/// @return {List}            - text-shadow list
+@function stroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke * -1;
+  @for $i from $from through $stroke {
+    @for $j from $from through $stroke {
+      $shadow: append($shadow, $i * 1px $j * 1px 0 $color, comma);
+    }
+  }
+  @return $shadow;
+}
+/// Stroke font-character
+/// @param  {Integer} $stroke - Stroke width
+/// @param  {Color}   $color  - Stroke color
+/// @return {Style}           - text-shadow
+@mixin stroke($stroke, $color) {
+  text-shadow: stroke($stroke, $color);
+}
+
+.main_text, .secondary_text {
+  color: #f9faf8;
+  letter-spacing: 0.1em;
+}
+
+/* {
+  @include stroke(1, black);
+  text-transform: uppercase;
+}*/
+
+.secondary_text {
+  //just looks good on thin stroke sizes.
+    text-shadow: -1px 0  #000000, 0 1px  #000000, 1px 0  #000000, 0 -1px  #000000;
+}
+
+.main_text {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 2px; 
+  text-transform: uppercase;
+}
