@@ -118,8 +118,8 @@
 @media (max-width: 1100px){
     .hero{
         flex-direction: column;
-        gap:1em;
-        max-width: 85%;
+        gap:2em;
+        max-width: 100%;
     }
     .layer1{
         height: 100%;
@@ -132,6 +132,7 @@
         width: auto;
         flex-wrap: wrap;
         max-width: 100%;
+        flex-direction: row;
     }
     .container{
         justify-content: center;
