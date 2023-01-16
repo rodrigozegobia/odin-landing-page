@@ -1,4 +1,4 @@
-const menuBtn = document.querySelector('.menuHamburger')
+/*const menuBtn = document.querySelector('.menuHamburger')
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
     if (!menuOpen) {
@@ -30,4 +30,7 @@ function showOrHide() {
     } else {
         c()
     }
-}
+}*/
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
