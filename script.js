@@ -34,3 +34,9 @@ function showOrHide() {
 
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+if (!serverSide) {
+    visualViewport.addEventListener('resize', () => {
+    ocument.documentElement.style.setProperty('--viewport-height', `${visualViewport.height}px`);
+    });
+}

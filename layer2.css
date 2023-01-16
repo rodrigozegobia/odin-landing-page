@@ -77,7 +77,7 @@ ul .info_list{
 }
 
 .layer2 ul li a img:hover{
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
     box-shadow: 0 0 5px rgb(255, 255, 255);
     transition: transform 1s;
 }
